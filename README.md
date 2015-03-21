@@ -9,17 +9,19 @@ Usage:
 
 1) Enable `$config['enable_hooks']` in config/config.php, set this to TRUE
 
-```$config['enable_hooks'] = TRUE;```
+```
+$config['enable_hooks'] = TRUE;
+```
 
 2) Add this code in config/hooks.php
 
 ```
-    $hook['display_override'] = array(
-        'class'    => 'OutputHandler',
-        'function' => '__construct',
-        'filename' => 'null_handler.php',
-        'filepath' => 'hooks'
-    );
+$hook['display_override'] = array(
+    'class'    => 'OutputHandler',
+    'function' => '__construct',
+    'filename' => 'null_handler.php',
+    'filepath' => 'hooks'
+);
 ```
 
 3) place null_handler.php in hooks folder.
